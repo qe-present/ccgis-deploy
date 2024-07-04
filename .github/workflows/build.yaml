@@ -27,8 +27,8 @@ jobs:
 
         shell: bash
       - name: 部署 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-build
-          folder: dist/spa
-
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          BASE_BRANCH: main
+          BRANCH: gh-pages
+          FOLDER: dist/spa
