@@ -20,14 +20,12 @@ jobs:
       - name: 读取仓库内容
         uses: actions/checkout@v4
 
-
       - name: 安装依赖和构建
         run: |
             npm install
             npm run build
 
         shell: bash
-
       - name: 部署 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
