@@ -1,12 +1,5 @@
 name: 构建ccgis并部署
-on:
-  workflow_dispatch:
-    inputs:
-      file-number:
-        description: '选择要构建的文件编号'
-        required: true
-        default: '01'
-        type: string
+on: push
 
 permissions:
   contents: write
@@ -14,7 +7,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name:  打包ccgis并部署
+    name: 打包ccgis并部署
     steps:
 
       - name: 读取仓库内容
@@ -22,8 +15,8 @@ jobs:
 
       - name: 安装依赖和构建
         run: |
-            npm install
-            npm run build
+          npm install
+          npm run build
 
         shell: bash
       - name: 部署 🚀
