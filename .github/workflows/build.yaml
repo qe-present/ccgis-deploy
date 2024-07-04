@@ -1,0 +1,36 @@
+name: 构建ccgis并部署
+on:
+  workflow_dispatch:
+    inputs:
+      file-number:
+        description: '选择要构建的文件编号'
+        required: true
+        default: '01'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name:  打包ccgis并部署
+    steps:
+
+      - name: 读取仓库内容
+        uses: actions/checkout@v4
+
+
+      - name: 安装依赖和构建
+        run: |
+            npm install
+            npm run build
+
+        shell: bash
+
+      - name: 部署 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-build
+          folder: dist/spa
+
