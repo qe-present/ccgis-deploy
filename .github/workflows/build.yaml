@@ -24,3 +24,8 @@ jobs:
         with:
           branch: gh-pages
           folder: dist/spa
+      - name: 上传
+        uses: actions/upload-artifact@v4
+        with:
+          name: ccgis-build
+          path: dist/spa
