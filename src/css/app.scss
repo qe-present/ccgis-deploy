@@ -1,0 +1,22 @@
+// app global css in SCSS form
+#query{
+  max-width: 400px;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1002;
+}
+#map {
+  margin: 0 auto;
+  width: 100%;
+  height: 900px;
+}
+#query2{
+  max-width: 400px;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+}

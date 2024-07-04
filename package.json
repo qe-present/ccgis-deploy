@@ -1,0 +1,53 @@
+{
+  "name": "CCGIS",
+  "version": "0.0.1",
+  "description": "WebGIS项目",
+  "productName": "CCGIS",
+  "author": "qe-present <2664481691@qq.com>",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "electron": "quasar dev -m electron",
+    "electron-build": "quasar build -m electron",
+    "deploy": "push-dir --dir=dist/spa --remote=gh-pages --branch=master"
+  },
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@electron/remote": "^2.1.2",
+    "@quasar/extras": "^1.16.4",
+    "@supermap/iclient-leaflet": "^11.1.1",
+    "@turf/turf": "^7.0.0",
+    "axios": "^1.2.1",
+    "crypto-js": "^4.2.0",
+    "leaflet": "^1.9.4",
+    "leaflet-minimap": "^3.6.1",
+    "leaflet.pm": "^2.2.0",
+    "pinia": "^2.0.11",
+    "pinia-plugin-persistedstate": "^3.2.1",
+    "pinyin-pro": "^3.22.2",
+    "push-dir": "^0.4.1",
+    "quasar": "^2.6.0",
+    "vue": "^3.4.18",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@electron/packager": "^18.3.3",
+    "@quasar/app-vite": "^2.0.0-beta.5",
+    "autoprefixer": "^10.4.2",
+    "electron": "^31.0.2",
+    "electron-builder": "^24.13.3",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "postcss": "^8.4.14",
+    "prettier": "^3.0.3",
+    "vite-plugin-checker": "^0.6.4"
+  },
+  "engines": {
+    "node": "^24 || ^22 || ^20 || ^18",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
